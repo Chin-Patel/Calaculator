@@ -7,8 +7,6 @@ podTemplate(label: 'java',
        container("jdk8") {
            stage('Test') {
                sh './gradlew cucumber'
-              cucumber fileIncludePattern: '**/cucumber.json',
-                sortingMethod: 'ALPHABETICAL'
            }
        }
    }
